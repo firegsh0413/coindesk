@@ -6,6 +6,13 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import will.demo.coindesk.entity.dto.CoinDeskDTO;
 
+/**
+ * <p>
+ * 外部api
+ * </p>
+ * @author firegsh
+ * @since 2025-05-05 16:05:07
+ **/
 @Component
 @RequiredArgsConstructor
 public class CoinDeskAPI {
@@ -16,8 +23,6 @@ public class CoinDeskAPI {
     private String jsonUrl;
 
     public CoinDeskDTO importBitcoinData() {
-        //HttpHeaders headers = new HttpHeaders();
-        //headers.setContentType(MediaType.APPLICATION_JSON);
         return restTemplate.getForObject(jsonUrl, CoinDeskDTO.class);
 
     }

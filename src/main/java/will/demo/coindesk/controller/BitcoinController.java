@@ -47,6 +47,16 @@ public class BitcoinController {
         return ResponseEntity.ok(currencyInfoService.query(id));
     }
 
+    /**
+     * <p>
+     * 模糊比對名稱字首
+     * </p>
+     *
+     * @param name 幣別名稱
+     * @author firegsh
+     * @since 2025-05-05 16:05:23
+     * @return org.springframework.http.ResponseEntity<will.demo.coindesk.entity.vo.CurrencyInfoVO>
+     **/
     @GetMapping("/currency/get")
     public ResponseEntity<CurrencyInfoVO> getCurrencyByName(@RequestParam String name) {
         return ResponseEntity.ok(currencyInfoService.queryByName(name));

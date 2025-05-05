@@ -19,6 +19,7 @@ spring:
     init:
       mode: embedded
       schema-locations: classpath:init.sql
+      data-locations: classpath:initData.sql
 
 springdoc:
   api-docs:

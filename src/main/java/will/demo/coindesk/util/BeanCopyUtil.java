@@ -6,6 +6,13 @@ import java.beans.PropertyDescriptor;
 import java.util.Arrays;
 import java.util.Objects;
 
+/**
+ * <p>
+ * BeanUtils擴充
+ * </p>
+ * @author firegsh
+ * @since 2025-05-05 16:05:39
+ **/
 public class BeanCopyUtil {
 
     public static void copyNonNullProperties(Object source, Object target) {

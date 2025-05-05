@@ -4,7 +4,6 @@ spring:
     url: jdbc:h2:mem:test
     username: sa
     password: password
-
   h2:
     console:
       enabled: true
@@ -14,10 +13,18 @@ spring:
     database-platform: org.hibernate.dialect.H2Dialect
     generate-ddl: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
+  # 初始化DB
+  sql:
+    init:
+      mode: embedded
+      schema-locations: classpath:init.sql
 
 springdoc:
   api-docs:
     path: /api-docs # API 文件的路徑，預設的
   swagger-ui:
     path: /swagger-ui.html  # Swagger UI 界面的路徑，預設的
+
+coindesk:
+  json: "https://kengp3.github.io/blog/coindesk.json"
